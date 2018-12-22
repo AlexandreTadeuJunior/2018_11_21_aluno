@@ -28,5 +28,19 @@ module NeyDemo
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # Add website for call API, in case all site call my API
+    config.middleware.insert_before 0, Rack::Cors do
+     allow do
+       origins '*'
+       resource '*',
+         headers: :any,
+         methods: %i(get post put patch delete options head)
+     end
+    end
+
+    # Config Rack Attack
+    config.middleware.use Rack::Attack
+
   end
 end

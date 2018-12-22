@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* For security
+  - improve rack attack and rack-cors
+  - created system for authentication with Token

@@ -11,6 +11,9 @@ gem 'sqlite3'
 gem 'puma', '~> 3.11'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker'
+# Add protect to attack
+gem 'rack-cors'
+gem 'rack-attack'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
