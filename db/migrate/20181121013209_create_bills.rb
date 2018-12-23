@@ -1,6 +1,7 @@
 class CreateBills < ActiveRecord::Migration[5.2]
   def change
     create_table :bills do |t|
+      t.integer   :billing_id
       t.numeric   :value
       t.datetime  :due_date
       t.datetime  :paid_date
