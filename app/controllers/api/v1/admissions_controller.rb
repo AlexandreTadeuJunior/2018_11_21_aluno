@@ -1,4 +1,4 @@
-class Api::V1::AdmissionController < ApplicationController
+class Api::V1::AdmissionsController < ApplicationController
   before_action :set_admission, only: [:show, :edit, :update]
 
   # GET /admission
