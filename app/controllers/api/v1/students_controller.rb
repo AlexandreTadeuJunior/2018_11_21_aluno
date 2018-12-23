@@ -9,6 +9,7 @@ class Api::V1::StudentsController < ApplicationController
 
   # GET /students/1
   def show
+    json_response(@students)
   end
 
   # GET /students/new
