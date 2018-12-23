@@ -23,9 +23,21 @@ class Api::V1::StudentsController < ApplicationController
 
   # POST /students
   def create
+    # Save student
     @student = Student.new(student_params)
-    @student.save
-    json_response(@student, :created)
+    ret = @student.save
+
+    # verify if student saved with sucess
+    if ret
+      # Save admission student
+      @admission = Admission.new({student_id: @student[:id], enem_grade: params[:enem_grade].to_i})
+      @admission.save
+      
+      #return jsons with jsons student
+      json_response(@student, :created)
+    else
+      render json: {status: "error", code: 422, message: "Erros to save student"} and return
+    end
   end
 
   # PATCH/PUT /students/1
