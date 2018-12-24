@@ -32,11 +32,11 @@ class Api::V1::StudentsController < ApplicationController
       # Save admission student
       @admission = Admission.new({student_id: @student[:id], enem_grade: params[:enem_grade].to_i})
       @admission.save
-      
+
       #return jsons with jsons student
       json_response(@student, :created)
     else
-      render json: {status: "error", code: 422, message: "Erros to save student"} and return
+      render json: {status: "error", code: 422, message: "Error to save student"} and return
     end
   end
 
