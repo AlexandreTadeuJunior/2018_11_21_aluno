@@ -28,5 +28,5 @@ Things you may want to cover:
   - created system for authentication with Token
 
 * To improve
- - Create a login method for the user to change only their data
- - Verify valid CPF data
+   - Create a login method for the user to change only their data
+   - Verify valid CPF data
